@@ -1,0 +1,34 @@
+<ion-view view-title="Resumen semanal">
+    <ion-content>
+        <ion-list>
+            <div class="itemDiario itemResumen" ng-repeat="item in items">
+
+
+                <ion-item class="p0 pt10">
+                    <div class="row">
+                        <div class="col col-75"><h3>{{ item.nombre }}</h3></div>
+
+
+
+                        <div class="col col-25 alR">
+                            <img src="img/badges/{{ item.icon }}.png" alt="Medalla" /> <strong style='margin-left: 5px' class="numBadge mr10">x 20</strong>
+                        </div>
+                    </div>
+                    <div class="row barraEnergia">
+                        <div class="overlay"></div>
+                        <div ng-repeat="actividad in item.days" class="col {{ actividad.clase}}"></div>        
+                    </div>
+                  <!--<div class="item item-divider">
+                      <h5>{{ item.nombre }}</h5>
+                  </div>
+                  <a class="item item-icon-left" href="#">
+                    <div class="row barraEnergia">
+                      <div ng-repeat="actividad in item.days" class="col {{ actividad.clase}}"></div>
+                    </div>
+
+                  </a>-->
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

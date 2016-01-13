@@ -1,0 +1,32 @@
+<ion-view view-title="Buscar">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchInput" ng-change="buscarDato(searchInput)">
+      </label>
+    </div>
+    
+    <h3>Search results:</h3>
+    <ion-list>
+
+        <ion-item ng-repeat="comida in comidas" type="item">  <!-- NOT THE DOT NOTATION! -->
+            <h3 ng-click="agegarComida(comida.id)">{{comida.nombre}}</h3>
+        </ion-item>            
+    </ion-list>
+    <!--<ion-list can-swipe="true">
+      <ion-item ng-repeat="actividad in data">
+
+        <div class="row">
+          <div class="col col-50">{{actividad.nombre}}</div>      
+          <div class="col col-25">{{actividad.minutos}}</div>      
+          <div class="col col-25">{{actividad.total_kcal}}</div>      
+        </div>
+      <ion-option-button class="button-positive">
+        <i class="icon ion-ios-trash"></i>
+      </ion-option-button>      
+    </ion-item>
+  </ion-list>-->    
+
+  </ion-content>
+</ion-view>

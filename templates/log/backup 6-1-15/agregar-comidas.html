@@ -1,0 +1,69 @@
+<ion-view view-title="Actividad">
+  <ion-content>
+    
+    <div class="row">
+      <div class="col">
+        <h3>{{ comida.nombre }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-50">
+        <label class="item item-input">
+          <span class="input-label">Porciones.</span>
+          <input type="number" ng-model="cantidad" placeholder="0">
+        </label>
+      </div>
+      <div class="col-50">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Tipo de porción
+          </div>
+          <select ng-model="porcion">
+            <option value="1">Blue</option>
+            <option value="2" selected>Green</option>
+            <option value="3">Red</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col list">
+        <label class="item item-radio">
+          <input type="radio" ng-model="periodo" value="1">
+          <div class="item-content">
+            Desayuno
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+        <label class="item item-radio">
+          <input type="radio" ng-model="periodo" value="2">
+          <div class="item-content">
+            Almuerzo
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+        <label class="item item-radio">
+          <input type="radio" ng-model="periodo" value="3">
+          <div class="item-content">
+            Cena
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+        <label class="item item-radio">
+          <input type="radio" ng-model="periodo" value="4">
+          <div class="item-content">
+            Otros
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="button button-full button-stable" ng-click="addComida(cantidad,porcion,periodo)">
+          Agregar
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

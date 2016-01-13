@@ -1,0 +1,23 @@
+<ion-view view-title="Inicio de Sesion">  
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list list-inset">
+        <label class="item item-input list-inset-separate">          
+          <input type="text" name="mail" placeholder="Direccion de e-mail" ng-model="usuario.mail" />
+        </label>
+        <label class="item item-input list-inset-separate">          
+          <input type="password" name="pass" placeholder="Contraseña" ng-model="usuario.pass" />
+        </label>
+        <button class="button button-block button-stable item list-inset-separate" type="submit">Ingresar</button>
+        <a href="#">Recuperar Contraseña</a>
+        <br/>
+        <h4>¿Todavia no sos miembro?</h4>
+        <button class="button button-block button-stable item list-inset-separate" ui-sref="appNoLog.register">¡Registrate ahora mismo!</button>
+        <a href="#">Terminos y condiciones de uso</a>
+        
+        
+        
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

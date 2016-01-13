@@ -1,0 +1,50 @@
+<ion-view view-title="Actividad">
+  <ion-content>
+	<ion-item class="item-dark mt20 itemDiario p0">
+
+        <div class="row">
+            <div class="col"><h3 class="cBlanco t20 wLight">Añadir comida al día <strong>19 / 10 / 2015</strong></h3></div>
+        </div>
+    </ion-item>
+	<div class="row">
+      <div class="col">
+        <h3>{{ comida.nombre }}</h3>
+      </div>
+    </div>
+	<div class="formSueno list pr10 pl10">
+        <label class="item item-input mb10">
+            <span class="input-label">Porciones.</span>
+            <input type="number" ng-model="cantidad" placeholder="0">
+        </label>
+        <label class="item item-input item-select mb10">
+            <div class="input-label">
+              Tipo de porción
+            </div>
+            <select ng-model="porcion">
+              <option value="1">Blue</option>
+              <option value="2" selected>Green</option>
+              <option value="3">Red</option>
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+              Momento del día
+            </div>
+            <select ng-model="porcion">
+              <option value="1">Desayuno</option>
+              <option value="2">Almuerzo</option>
+              <option value="3">Cena</option>
+              <option value="4">Otros</option>
+            </select>
+        </label>
+        
+    <div class="row">
+      <div class="col">
+        <button class="button button-full button-stable ion-checkmark icon-right" ng-click="addComida(cantidad,porcion,periodo)">
+          Confirmar
+
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

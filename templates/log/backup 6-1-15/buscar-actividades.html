@@ -1,0 +1,48 @@
+<ion-view view-title="Buscar">
+  <ion-content class="z100">
+    <ion-item class="item-dark p0 mt20">
+        <div class="row pb0">
+            <div class="col"><span class="helperVA"></span><h3 class="cBlanco t20 helpedVA wLight">Añadir actividad al día <strong>{{ activityDate }}</strong></h3></div>
+        </div>
+    </ion-item>  
+    <div class="list m0 mt20 p0 sdwB">
+      <label class="bgBlanco item-input">
+        <i class="icon ion-search icon-right placeholder-icon"></i>
+        <input type="text" ng-focus="hideAdvice()" ng-blur="showAdvice()" placeholder="Ingresa el nombre de la actividad" ng-model="searchInput" ng-change="buscarDato(searchInput)">
+      </label>
+    </div>
+    
+
+    <ion-list class="listaResultados">
+
+        <ion-item ng-repeat="activity in activities" type="item">
+            <h3 ng-click="agegarActividad(activity.id)">{{activity.nombre}}</h3>
+        </ion-item>            
+    </ion-list>
+    <!--<ion-list can-swipe="true">
+      <ion-item ng-repeat="actividad in data">
+
+        <div class="row">
+          <div class="col col-50">{{actividad.nombre}}</div>      
+          <div class="col col-25">{{actividad.minutos}}</div>      
+          <div class="col col-25">{{actividad.total_kcal}}</div>      
+        </div>
+      <ion-option-button class="button-positive">
+        <i class="icon ion-ios-trash"></i>
+      </ion-option-button>      
+    </ion-item>
+  </ion-list>-->    
+
+  </ion-content>
+    <!-- Consejos -->
+    <div id="consejo" class="consejoWrap">
+        <div class="globoInfo globoConsejo globoAtenea">
+            <p>{{ consejo.cuerpo }}</p>
+        </div>
+        <div class="contCirculo circuloIz circuloConsejo">
+            <div class="info">
+                <img src="http://fxhernandez.com.ar/sitios/entrenate/aplicacion/img/consejeros/consejero-{{ consejo.personaje }}.png" alt="" class="consejero"/>
+            </div>		
+        </div>
+    </div>
+</ion-view>

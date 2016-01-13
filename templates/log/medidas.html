@@ -1,0 +1,38 @@
+<ion-view view-title="Actualizar medidas corporales">  
+  <ion-content>
+    <form ng-submit="doLogin()" class="standardForm">
+      <div class="list list-inset">
+          
+        <p class="content padding">En esta sección vas a poder actualizar tu peso y tus tallas.</p>
+        <p class="content padding">Es importante que actualices estos datos regularmente, para poder obtener datos precisos acerca de tu estado físico.</p>
+        
+        <label class="item item-input list-inset-separate">          
+          <input type="text" name="peso" placeholder="Peso (kg)" ng-model="usuario.peso" />
+        </label>
+        <label class="item item-input list-inset-separate">          
+          <input type="text" name="talla" placeholder="Talla (cm)" ng-model="usuario.talla" />
+        </label>
+        <label class="item item-input list-inset-separate">          
+          <input type="text" name="cintura" placeholder="Perimetro de cintura (cm)" ng-model="usuario.cintura" />
+        </label>
+        <label class="item item-input list-inset-separate">          
+          <input type="text" name="cadera" placeholder="Perimetro de cadera (cm)" ng-model="usuario.cadera" />
+        </label>
+        
+         <label class="item item-input item-select">
+            <div class="input-label">
+              Recordatorio para actualización
+            </div>
+            <select name="actualizacion">
+              <option value="0" selected>Semanal</option>
+              <option value="1">Quincenal</option>
+              <option value="2">Mensual</option>
+            </select>
+          </label>
+        
+        <button class="button button-block button-stable item list-inset-separate ion-android-arrow-dropright-circle icon-right" type="submit">Actualizar</button>
+        
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="Actividad">
+  <ion-content>
+    <ion-item class="item-dark mt20 itemDiario p0">
+        <div class="row">
+            <div class="col"><h3 class="cBlanco t20 wLight">Añadir actividad al día <strong>{{ activityDate }}</strong></h3></div>
+        </div>
+    </ion-item> 
+    <div class="row mt20">
+      <div class="col">
+        <h3 class="t18">{{ activity.nombre }}</h3>
+      </div>
+    </div>
+    <div class="row formSueno pl10 pr10">
+      <div class="col-50">
+        <label class="item item-input">
+          <span class="input-label">Hrs.</span>
+          <input type="number" ng-model="hrActividad" placeholder="00">
+        </label>
+      </div>
+      <div class="col-50">
+        <label class="item item-input">
+          <span class="input-label">Mins.</span>
+          <input type="number" ng-model="minActividad" placeholder="00">
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="button button-full button-stable ion-checkmark icon-right" ng-click="addActivity(hrActividad,minActividad)">
+
+          Confirmar
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,50 @@
+<ion-view view-title="Actividades" cache-view="false">  
+  <ion-content>
+    <ion-item class="item-dark p0 mt20 itemDiario">
+        <div class="row">
+            <div class="col"><h3 class="cBlanco wLight">Actividades realizadas el día <strong>{{ activityDate }}</strong></h3></div>
+            <div class="col col-15 alR" ng-click="agregarActividades()"><img src="img/icons/plus-naranja.png" alt="" /></div>
+        </div>
+    </ion-item>  
+  <div class="p20 alC wLight">
+      <p class="t16">Gasto calórico del día</p>
+      <p class="t36"><strong class="{{ data.kcal.clase }}">{{ data.kcal.valor }}</strong> cal.</p>
+  </div>
+  <div class="row formSueno">
+    <div class="col alR pr10">
+      <span class="t14">Horas de sueño</span>
+    </div>
+    <div class="col-25">
+      <label class="item item-input">
+        <span class="input-label">Hrs.</span>
+        <input type="number" placeholder="00">
+      </label>
+    </div>
+    <div class="col-25">
+      <label class="item item-input">
+        <span class="input-label">Mins.</span>
+        <input type="number" placeholder="00">
+      </label>
+    </div>
+  </div>
+	<div class="tablaDatos">
+		<div class="row firstRow">
+		  <div class="col">Actividad</div>      
+		  <div class="col">Duración</div>      
+		  <div class="col">Calorías quemadas</div>      
+		  <div class="col-10"></div>      
+		</div>
+		<div class="row" ng-repeat="actividad in data.actividades">
+			  <div class="col">{{actividad.nombre}}</div>      
+			  <div class="col">{{actividad.minutos}}</div>      
+			  <div class="col">{{actividad.total_kcal}}</div>      
+			  <div class="col col-10"><i class="icon ion-android-cancel cNaranja" ng-click="borrarActividad(actividad.id)"></i></div>    
+		</div>
+    </div>
+  <div class="p20 alC">
+	<a ng-click="agregarActividades()" class="pt10 pb10"><img style="width: 30px; height: 30px;" src="img/icons/plus-naranja.png" /></a>
+    <button class="button button-block button-balanced item list-inset-separate ion-archive icon-right" ng-click="volver()">Guardar cambios</button>      
+  </div>
+
+  </ion-content>
+</ion-view>

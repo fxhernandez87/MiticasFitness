@@ -1,0 +1,60 @@
+<ion-view view-title="Actividades" cache-view="false">
+  <!--<ion-nav-buttons side="primary" >
+    <button class="button button-icon button-clear ion-plus" ng-click="agregarActividades()"></button>    
+
+  </ion-nav-buttons>-->
+  <ion-content>
+    <ion-item class="item-dark p0 mt20">
+        <div class="row pb0">
+            <div class="col"><span class="helperVA"></span><h3 class="cBlanco t20 helpedVA wLight">Actividades realizadas el día <strong>{{ activityDate }}</strong></h3></div>
+            <div class="col col-25 alR" ng-click="agregarActividades()"><i class="icon ion-android-add-circle t36 cNaranja"></i></div>
+        </div>
+    </ion-item>
+  <!--<ion-list can-swipe="true">
+      <ion-item ng-repeat="actividad in data">
+
+        <div class="row">
+          <div class="col col-50">{{actividad.nombre}}</div>      
+          <div class="col col-25">{{actividad.minutos}}</div>      
+          <div class="col col-25">{{actividad.total_kcal}}</div>      
+        </div>
+      <ion-option-button class="button-positive">
+        <i class="icon ion-ios-trash"></i>
+      </ion-option-button>      
+    </ion-item>
+  </ion-list>-->
+  <div class="p20 alC wLight">
+      <p class="t16">Gasto calórico del día</p>
+      <p class="t36"><strong class="{{ data.kcal.clase }}">{{ data.kcal.valor }}</strong> cal.</p>
+  </div>
+    <div class="dTable tablaDatos">
+        <div class="fila">
+          <div class="columna">Actividad</div>      
+          <div class="columna">Duración</div>      
+          <div class="columna">Calorías quemadas</div>      
+          <div class="columna"></div>      
+        </div>
+        <div class="fila" ng-repeat="actividad in data.actividades">
+              <div class="columna">{{actividad.nombre}}</div>      
+              <div class="columna">{{actividad.minutos}}</div>      
+              <div class="columna">{{actividad.total_kcal}}</div>      
+              <div class="columna"><i class="icon ion-ios-trash" ng-click="borrarActividad(actividad.id)"></i></div>      
+        </div>
+
+      <!--<div class="list-item" ng-repeat="actividad in data">
+
+        <div class="row">
+          <div class="col col-40">{{actividad.nombre}}</div>      
+          <div class="col col-25">{{actividad.minutos}}</div>      
+          <div class="col col-25">{{actividad.total_kcal}}</div>      
+          <div class="col col-10"><i class="icon ion-ios-trash" ng-click="borrarActividad(actividad.id)"></i></div>      
+        </div>
+      </div>-->
+
+    </div>
+  <div class="p20">
+      <a href="#" class="button button-block button-balanced item list-inset-separate ion-archive icon-right" ng-click="volver()">Guardar cambios</a>
+  </div>
+
+  </ion-content>
+</ion-view>

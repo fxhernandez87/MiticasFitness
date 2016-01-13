@@ -1,0 +1,72 @@
+<ion-view view-title="Comidas" cache-view="false">
+  <ion-nav-buttons side="primary" >
+    <button class="button button-icon button-clear ion-plus" ng-click="agregarComidas()">        
+      </button>    
+  </ion-nav-buttons>
+  <ion-content>
+    <!--<ion-list can-swipe="true">
+      <ion-item ng-repeat="actividad in data">
+
+        <div class="row">
+          <div class="col col-50">{{actividad.nombre}}</div>      
+          <div class="col col-25">{{actividad.minutos}}</div>      
+          <div class="col col-25">{{actividad.total_kcal}}</div>      
+        </div>
+      <ion-option-button class="button-positive">
+        <i class="icon ion-ios-trash"></i>
+      </ion-option-button>      
+    </ion-item>
+  </ion-list>-->
+    <div class="list">
+      <h6>Desayuno</h6>
+      <div class="list-item" ng-repeat="comida in data | filter:{periodo:'1'}:true">
+        <div class="row">
+          <div class="col col-40">{{comida.nombre}}</div>      
+          <div class="col ">{{comida.grs_hid_de_carb}}</div>      
+          <div class="col ">{{comida.grs_proteinas}}</div>      
+          <div class="col">{{comida.grs_grasas}}</div>      
+          <div class="col ">{{comida.grs_alcohol}}</div>      
+          <div class="col ">{{actividad.kcal_total_SUMA}}</div>      
+          <div class="col "><i class="icon ion-ios-trash" ng-click="borrarComida(comida.id)"></i></div>      
+        </div>      
+      </div>
+      <h6>Almuerzo</h6>
+      <div class="list-item" ng-repeat="comida in data | filter:{periodo:'2'}:true">
+        <div class="row">
+          <div class="col col-40">{{comida.nombre}}</div>      
+          <div class="col ">{{comida.grs_hid_de_carb}}</div>      
+          <div class="col ">{{comida.grs_proteinas}}</div>      
+          <div class="col">{{comida.grs_grasas}}</div>      
+          <div class="col ">{{comida.grs_alcohol}}</div>      
+          <div class="col ">{{actividad.kcal_total_SUMA}}</div>      
+          <div class="col "><i class="icon ion-ios-trash" ng-click="borrarComida(comida.id)"></i></div>      
+        </div>      
+      </div>
+      <h6>Cena</h6>
+      <div class="list-item" ng-repeat="comida in data | filter:{periodo:'3'}:true">
+        <div class="row">
+          <div class="col col-40">{{comida.nombre}}</div>      
+          <div class="col ">{{comida.grs_hid_de_carb}}</div>      
+          <div class="col ">{{comida.grs_proteinas}}</div>      
+          <div class="col">{{comida.grs_grasas}}</div>      
+          <div class="col ">{{comida.grs_alcohol}}</div>      
+          <div class="col ">{{actividad.kcal_total_SUMA}}</div>      
+          <div class="col "><i class="icon ion-ios-trash" ng-click="borrarComida(comida.id)"></i></div>      
+        </div>      
+      </div>
+      <h6>Varios</h6>
+      <div class="list-item" ng-repeat="comida in data | filter:{periodo:'4'}:true">
+        <div class="row">
+          <div class="col col-40">{{comida.nombre}}</div>      
+          <div class="col ">{{comida.grs_hid_de_carb}}</div>      
+          <div class="col ">{{comida.grs_proteinas}}</div>      
+          <div class="col">{{comida.grs_grasas}}</div>      
+          <div class="col ">{{comida.grs_alcohol}}</div>      
+          <div class="col ">{{actividad.kcal_total_SUMA}}</div>      
+          <div class="col "><i class="icon ion-ios-trash" ng-click="borrarComida(comida.id)"></i></div>      
+        </div>      
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
